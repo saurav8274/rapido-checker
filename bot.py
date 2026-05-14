@@ -1,3 +1,4 @@
+```python
 import telebot
 from telebot import types
 import time
@@ -67,31 +68,21 @@ def callback(call):
 
         bot.send_message(
             call.message.chat.id,
-            "📲 𝗦𝗘𝗡𝗗 𝗡𝗨𝗠𝗕𝗘𝗥
-
-Example:
-/check 9876543210"
+            "📲 SEND NUMBER\n\nExample:\n/check 9876543210"
         )
 
     elif call.data == "premium":
 
         bot.send_message(
             call.message.chat.id,
-            "👑 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 𝗩𝗘𝗥𝗦𝗜𝗢𝗡
-
-⚡ Faster Checking
-📂 Bulk Checker
-🛡 Advanced Access"
+            "👑 PREMIUM VERSION\n\n⚡ Faster Checking\n📂 Bulk Checker\n🛡 Advanced Access"
         )
 
     elif call.data == "help":
 
         bot.send_message(
             call.message.chat.id,
-            "🛠 𝗛𝗘𝗟𝗣 𝗖𝗘𝗡𝗧𝗘𝗥
-
-Use command:
-/check 9876543210"
+            "🛠 HELP CENTER\n\nUse command:\n/check 9876543210"
         )
 
 # =========================
@@ -116,11 +107,11 @@ def check(message):
             return
 
         # =========================
-        # FAKE LOADING EFFECT
+        # LOADING EFFECT
         # =========================
         loading = bot.reply_to(
             message,
-            "⏳ 𝗖𝗛𝗘𝗖𝗞𝗜𝗡𝗚 𝗡𝗨𝗠𝗕𝗘𝗥..."
+            "⏳ CHECKING NUMBER..."
         )
 
         time.sleep(2)
@@ -141,14 +132,14 @@ def check(message):
         # =========================
         final_text = f"""
 ╔══════════════════╗
-      𝗥𝗔𝗣𝗜𝗗𝗢 𝗖𝗛𝗘𝗖𝗞𝗘𝗥
+   RAPIDO CHECKER
 ╚══════════════════╝
 
-📱 𝗡𝗨𝗠𝗕𝗘𝗥: {number}
+📱 NUMBER: {number}
 
-📊 𝗦𝗧𝗔𝗧𝗨𝗦: {emoji} {result}
+📊 STATUS: {emoji} {result}
 
-⚡ 𝗖𝗛𝗘𝗖𝗞𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬
+⚡ CHECKED SUCCESSFULLY
 """
 
         bot.edit_message_text(
@@ -161,8 +152,7 @@ def check(message):
 
         bot.reply_to(
             message,
-            "❌ 𝗨𝗦𝗘:
-/check 9876543210"
+            "❌ USE:\n/check 9876543210"
         )
 
 # =========================
@@ -173,8 +163,7 @@ def unknown(message):
 
     bot.reply_to(
         message,
-        "❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗
-Use /start"
+        "❌ INVALID COMMAND\nUse /start"
     )
 
 # =========================
@@ -182,3 +171,4 @@ Use /start"
 # =========================
 print("🔥 Premium Bot Running...")
 bot.infinity_polling()
+```
