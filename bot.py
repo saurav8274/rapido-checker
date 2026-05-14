@@ -1,4 +1,3 @@
-```python
 import telebot
 from telebot import types
 import time
@@ -171,4 +170,3 @@ def unknown(message):
 # =========================
 print("🔥 Premium Bot Running...")
 bot.infinity_polling()
-```
